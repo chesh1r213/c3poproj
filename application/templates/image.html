@@ -4,49 +4,35 @@
 {{ super() }}
 
 
-<div class="row justify-content-center align-items-center" height="10%" width="10%" style="margin-top:15px;">
-<div class='imgblock'>
 
-<img src="/static/css/sdia (1).png" title='Текст поверх картинки' height="100px"
-width="500px">
-        <span class="typewriter" style="text-shadow: 1px 1px 2px green;">
-
-look what i found for you!
-       </span>
-
-</div>
-        <div class="section-row">
-        <div class="section-img">
-<p class="hover-img" data-url="/static/css/droid-c3po.gif"><img src="/static/css/pixelc3po-min.png"  align="right" width="-50%" height="100px"></p>
+<div class="text-center">
+<h2 style="color:#fff;font-family:'post_pixel-7.ttf';margin-top:10px">Что мы нашли</h2>
     </div>
-         <div class="cursor" id="cursor"></div>
+<div class="row justify-content-center align-items-center" style="margin-top:10px">
 
-
-</div>
-
-<div class="row justify-content-center align-items-center">
 <table class="table table-striped table-dark"  style="font-family:sans-serif;word-wrap: break-word;max-width:60%">
         <thead>
     <tr>
-        <th scope="col" style="color:#fff;font-weight: bold;max-width:50%">title</th>
-        <th scope="col" style="color:#fff;font-weight: bold;">url</th>
+        <th scope="col" style="color:#fff;font-weight: bold;max-width:0,1%">title</th>
+        <th scope="col" style="color:#fff;font-weight: bold;max-width:0,1%">url</th>
     </tr>
         </thead>
         <tbody>
         {% for dict_item in all %}
             {% for key,value in dict_item.items() %}
-        <tr>
+        <tr style="font-family:sans-serif;word-wrap: break-word;width:10px;">
 
-        <td style="font-family:sans-serif;word-wrap: break-word;">{{ key }}</td>
-            <td style="font-family:sans-serif;word-wrap: break-word;max-width:50%"><a href="{{value}}" target="_blank">{{ value }}</a></td>
+        <td style="font-family:sans-serif;word-wrap: break-word;width:10px;">{{ key }}</td>
+            <td style="font-family:sans-serif;word-wrap: break-word;width:10px;"><a href="{{value}}" style="font-family:sans-serif;word-wrap: break-word;max-width:0,1%" target="_blank">{{ value }}</a></td>
 
-        {% endfor %}
+{% endfor %}
         {% endfor %}
     </tbody>
     </tr>
+
 </table>
 </div>
-</div>
+
 
 
 
