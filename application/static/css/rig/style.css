@@ -1,0 +1,63 @@
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.select-field {
+    color: white
+}
+
+.pick-field {
+    background-color: rgba(100,100,100,0.7);
+}
+.dbf {
+    background: no-repeat bottom,50% calc(100% - 1px);
+    text-align: center;
+    background-size: 0 100%,100% 100%;
+    margin-top: 0.2em;
+
+}
+
+#select-id {
+    text-indent: -1em;
+}
+
+#select-id::placeholder {
+    color: white;
+}
+
+#ButtonAn {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgba(0, 150, 136);
+    margin-top: 0.5em;
+}
+
+#ButtonQu {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgba(0, 150, 136);
+    margin-top: 0.5em;
+}
+
+.tb-head {
+    background-color: rgb(255, 255, 255);
+    position: sticky; top: 0;
+}
+
+.size-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.txt-sh {
+    text-shadow: 2px 2px #FF0000;
+}
+.new-td {
+    display: none;
+}
+
+.notvalid {
+    background-color: rgba(255,0,0,0.3);
+};

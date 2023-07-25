@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+{{ super() }}
+<div class="container">
+<table class="table table-dark" style="margin-left: -160px;border-radius: 30px;background-color:#181b1f;font-family:'tele2_textsans-regular';font-size: 10px;color:white;"width="400">
+  <thead>
+    <tr>
+        <h4 style="color:#fff;font-family:'post_pixel-7.ttf';text-shadow: 1px 1px 2px green;margin-left: -150px">Что мы считаем плохим качеством связи</h4>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width:10px;">DegradationAvg</td>
+      <td style="width:10px;">>1.0</td>
+      <td style="width:200px;">Деградация сети согласно MOS (Mean opinion score – средняя экспертная оценка разборчивости речи) в течении всего звонка. На данный показатель влияют значения Jitter и Packet Loss.</td>
+    </tr>
+    <tr>
+      <td style="width:10px;">RoundTrip</td>
+      <td style="width:10px;">>500</td>
+      <td style="width:200px;">Время, необходимое для получения IP-пакета из точки A в точку B. Эта задержка связана с физическим расстоянием и параметрами сетевой инфраструктуры между двумя точками.</td>
+    </tr>
+    <tr>
+      <td style="width:10px;">PacketLossRate</td>
+      <td style="width:10px">>0.1</td>
+      <td style="width:200px;">	Процент пакетов, потерянных за период. Потеря пакетов напрямую влияет на качество звука - от небольших отдельных потерянных пакетов, которые почти не влияют на качество, до последовательных «пакетных» потерь, которые вызывают полное отключение звука.</td>
+    </tr>
+   <tr>
+      <td style="width:10px;">JitterInterArrival</td>
+      <td style="width:10px">>30</td>
+      <td style="width:200px;">Среднее изменение задержки между последовательными пакетами. Большинство современных приложений VoIP, включая Skype для бизнеса, могут адаптироваться к некоторым уровням Jitter за счет буферизации. В случае если Jitter превышает буферизацию, участник заметит ухудшение качества связи.</td>
+    </tr>
+  <tr>
+      <td style="width:10px;">RatioConcealedSamplesAvg</td>
+      <td style="width:10px">>0.07</td>
+      <td style="width:200px;">Среднее отношение восстановленных звуковых сэмплов (потерянных из-за Packet loss), к общему количеству звуковых сэмплов</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+<div class="container" style="margin-left: 20px;">
+
+<iframe src="http://grafit.corp.tele2.ru/d-solo/GU9Z7GqWz/sfb-mt-monitoring?orgId=1&var-persons_text={{ us }}&from={{st}}&to={{en}}&panelId=2" width="1200" height="200" frameborder="0"></iframe>
+
+    </div>
+ <div class="container" style="margin-left: 20px;padding: 10px;">
+
+<iframe src="http://grafit.corp.tele2.ru/d-solo/GU9Z7GqWz/sfb-mt-monitoring?orgId=1&var-persons_text={{ us }}&from={{st}}&to={{en}}&panelId=8" width="450" height="200" frameborder="0"></iframe>
+
+    <iframe src="http://grafit.corp.tele2.ru/d-solo/GU9Z7GqWz/sfb-mt-monitoring?orgId=1&var-persons_text={{ us }}&from={{st}}&to={{en}}&panelId=10" width="450" height="200" frameborder="0"></iframe>
+
+<iframe src="http://grafit.corp.tele2.ru/d-solo/GU9Z7GqWz/sfb-mt-monitoring?orgId=1&var-persons_text={{ us }}&from={{st}}&to={{en}}&panelId=12" width="450" height="200" frameborder="0"></iframe>
+<iframe src="http://grafit.corp.tele2.ru/d-solo/GU9Z7GqWz/sfb-mt-monitoring?orgId=1&var-persons_text={{ us }}&from={{st}}&to={{en}}&panelId=14" width="450" height="200" frameborder="0"></iframe>
+<iframe src="http://grafit.corp.tele2.ru/d-solo/GU9Z7GqWz/sfb-mt-monitoring?orgId=1&var-persons_text={{ us }}&from={{st}}&to={{en}}&panelId=16" width="450" height="200" frameborder="0"></iframe>
+</div>
+<div class="container" style="margin-left: 15px;">
+<iframe src="http://grafit.corp.tele2.ru/d-solo/GU9Z7GqWz/sfb-mt-monitoring?orgId=1&var-persons_text={{ us }}&from={{st}}&to={{en}}&panelId=18" width="1200" height="250" frameborder="0"></iframe>
+    </div>
+<div class="container" style="margin-left: 10px;padding: 20px;">
+    <iframe src="http://grafit.corp.tele2.ru/d-solo/GU9Z7GqWz/sfb-mt-monitoring?orgId=1&var-persons_text={{ us }}&from={{st}}&to={{en}}&panelId=4" width="1200" height="500" frameborder="0"></iframe>
+</div>
+{% endblock %}

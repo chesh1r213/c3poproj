@@ -1,0 +1,663 @@
+@font-face {
+  font-family: "Tele2DisplaySerif"; /* Имя шрифта */
+  src: url("/fonts/tele2_displayserif-regular.ttf"); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: "tele2_textsans-regular"; /* Имя шрифта */
+    src: url("/fonts/tele2_displayserif-regular.ttf"); /* Путь к файлу со шрифтом */
+  }
+body {
+    font-family: "tele2_displayserif-regular.ttf"!important;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+  }
+
+
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+
+  body > .container {
+    padding: 60px 15px 0;
+  }
+
+  .footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  code {
+    font-size: 80%;
+  }
+#block {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+
+}
+
+#block:hover {
+  height: auto;
+  cursor: pointer;
+}
+
+ .preloader {
+      /*фиксированное позиционирование*/
+      position: fixed;
+      /* координаты положения */
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      /* фоновый цвет элемента */
+      background: #e0e0e0;
+      /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+      z-index: 1001;
+    }
+
+    .preloader__row {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 70px;
+      height: 70px;
+      margin-top: -35px;
+      margin-left: -35px;
+      text-align: center;
+      animation: preloader-rotate 2s infinite linear;
+    }
+
+    .preloader__item {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      background-color: #337ab7;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      animation: preloader-bounce 2s infinite ease-in-out;
+    }
+
+    .preloader__item:last-child {
+      top: auto;
+      bottom: 0;
+      animation-delay: -1s;
+    }
+
+    @keyframes preloader-rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes preloader-bounce {
+
+      0%,
+      100% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+    }
+
+    .loaded_hiding .preloader {
+      transition: 0.3s opacity;
+      opacity: 0;
+    }
+
+    .loaded .preloader {
+      display: none;
+    }
+
+.hide {
+  display: none;
+}
+.loader {
+  font-size: 45px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease;
+  animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em #999999, 0 -0.83em 0 -0.42em #999999, 0 -0.83em 0 -0.44em #999999, 0 -0.83em 0 -0.46em #999999, 0 -0.83em 0 -0.477em #999999;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em #999999, 0 -0.83em 0 -0.42em #999999, 0 -0.83em 0 -0.44em #999999, 0 -0.83em 0 -0.46em #999999, 0 -0.83em 0 -0.477em #999999;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em #999999, -0.087em -0.825em 0 -0.42em #999999, -0.173em -0.812em 0 -0.44em #999999, -0.256em -0.789em 0 -0.46em #999999, -0.297em -0.775em 0 -0.477em #999999;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em #999999, -0.338em -0.758em 0 -0.42em #999999, -0.555em -0.617em 0 -0.44em #999999, -0.671em -0.488em 0 -0.46em #999999, -0.749em -0.34em 0 -0.477em #999999;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em #999999, -0.377em -0.74em 0 -0.42em #999999, -0.645em -0.522em 0 -0.44em #999999, -0.775em -0.297em 0 -0.46em #999999, -0.82em -0.09em 0 -0.477em #999999;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em #999999, 0 -0.83em 0 -0.42em #999999, 0 -0.83em 0 -0.44em #999999, 0 -0.83em 0 -0.46em #999999, 0 -0.83em 0 -0.477em #999999;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em #999999, 0 -0.83em 0 -0.42em #999999, 0 -0.83em 0 -0.44em #999999, 0 -0.83em 0 -0.46em #999999, 0 -0.83em 0 -0.477em #999999;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em #999999, 0 -0.83em 0 -0.42em #999999, 0 -0.83em 0 -0.44em #999999, 0 -0.83em 0 -0.46em #999999, 0 -0.83em 0 -0.477em #999999;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em #999999, -0.087em -0.825em 0 -0.42em #999999, -0.173em -0.812em 0 -0.44em #999999, -0.256em -0.789em 0 -0.46em #999999, -0.297em -0.775em 0 -0.477em #999999;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em #999999, -0.338em -0.758em 0 -0.42em #999999, -0.555em -0.617em 0 -0.44em #999999, -0.671em -0.488em 0 -0.46em #999999, -0.749em -0.34em 0 -0.477em #999999;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em #999999, -0.377em -0.74em 0 -0.42em #999999, -0.645em -0.522em 0 -0.44em #999999, -0.775em -0.297em 0 -0.46em #999999, -0.82em -0.09em 0 -0.477em #999999;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em #999999, 0 -0.83em 0 -0.42em #999999, 0 -0.83em 0 -0.44em #999999, 0 -0.83em 0 -0.46em #999999, 0 -0.83em 0 -0.477em #999999;
+  }
+}
+
+.tooltip span{
+    border-radius: 5px 5px 5px 5px;
+    visibility: hidden;
+    position: absolute;
+    left: 200px;
+    background: #fff;
+    box-shadow: -2px 2px 10px -1px #333;
+    border-radius: 5px;
+}
+
+.tooltip:hover span{
+visibility: visible;
+}
+
+.button:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:hover.blue {
+  background: #39a1f4;
+}
+.button:hover.purple {
+  background: #a66bbe;
+}
+.button:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:active.blue {
+  background: #0d8aee;
+}
+.button:active.purple {
+  background: #8f4bab;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.button {
+  /* Сбрасываем дефолтные стили */
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  /* Можно также использовать любые встроенные и кастомные шрифты, например, отсюда  */
+  font-family: Roboto;
+  /* Тут можно поэкспериментировать */
+  padding: 12px 16px;
+  border-radius: 100px;
+  color: #fff;
+}
+.button i {
+  margin-right: 4px;
+}
+.button + .button {
+  margin-left: 6px;
+}
+.button.blue {
+  background: #2196F3;
+}
+.button.purple {
+  background: #9b59b6;
+}
+
+.button:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:hover.blue {
+  background: #39a1f4;
+}
+.button:hover.purple {
+  background: #a66bbe;
+}
+.button:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:active.blue {
+  background: #0d8aee;
+}
+.button:active.purple {
+  background: #8f4bab;
+}
+
+div.log {
+  margin: 24px;
+  text-align: center;
+}
+
+
+
+.form-input-material {
+  --input-default-border-color: white;
+  --input-border-bottom-color: white;
+
+  input {
+    color: white;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+
+.btn_new {
+  padding: 8px 20px;
+  border-radius: 0;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      var(--primary-color),
+      transparent
+    );
+    transform: translateX(-100%);
+    transition: 0.6s;
+  }
+
+  &:hover {
+    background: transparent;
+    box-shadow: 0 0 20px 10px hsla(204, 70%, 53%, 0.5);
+
+    &::before {
+      transform: translateX(100%);
+    }
+  }
+}
+
+#login-page {
+   width: 500px;
+}
+
+.grid {
+  inline-size: 90%;
+  margin-inline: auto;
+  max-inline-size: 20rem;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.nas {
+  background-color: #333333;
+  display: flex;
+  align-items:center;
+}
+
+.nas a {
+  color: #e7e7e7;
+}
+
+.nas .brand {
+  display: block;
+  padding: 0 24px;
+  font-size: 24px;
+}
+
+.nas ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items:center;
+  justify-content: flex-start;
+}
+
+.nas ul li a {
+  color: #e7e7e7;
+  padding: 24px;
+  display: block;
+}
+
+.nas ul a:hover,
+.nas ul a:focus,
+.nas ul .active {
+  background-color: #272727;
+}
+
+section-img {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'Roboto', sans-serif;
+}
+.cursor {
+    position: fixed;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    left: -100px;
+    top: 50%;
+    z-index: -1;
+    height: 50px;
+    width: 50px;
+    transition: all 200ms ease-out;
+    background-position: center;
+    background-size: 0 0;
+    border: 4px solid #BFE2FF;
+    display: none;
+}
+.section-row:hover .cursor {
+    display: block;
+}
+.cursor.hover {
+    height: 240px;
+    width: 240px;
+    z-index: 1;
+    background-size: cover;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+}
+.cursor.hide-cursor {
+    display: none;
+}
+.hover-img {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #337AB7;
+    transition: color 250ms ease;
+}
+.hover-img:before{
+    position: absolute;
+    content: '';
+    height: 0;
+    bottom: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    border-radius: 2px;
+    display: block;
+    background-color: #BFE2FF;
+    transition: height 250ms ease;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+}
+.hover-img:hover{
+    z-index: 5;
+    color: #000;
+}
+.hover-img:hover:before {
+    height: 100%;
+}
+
+.dropbtn {
+   position: relative;
+  background: none;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0.2em solid grey;
+  padding: 0.5em 1em;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #222;
+    height: 0.3em;
+    right: 20%;
+    top: -0.21em;
+    transform: skewX(-45deg);
+    -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #222;
+    height: 0.3em;
+    left: 20%;
+    bottom: -0.25em;
+    transform: skewX(45deg);
+    -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &:hover {
+    &::before {
+      right: 80%;
+    }
+    &::after {
+      left: 80%;
+    }
+  }
+}
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  z-index: 1;
+  text-color: black;
+  min-length: 10;
+  border: 0.2em solid grey;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: grey;
+  padding: 10px 10px;
+  text-decoration: 1;
+  display: block;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ffffff}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  color:black
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+
+.multi-button {
+  display: flex;
+  width: 100%;
+  box-shadow: var(--shadow) 4px 4px;
+}
+
+.multi-button button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space);
+  border: var(--border-size) solid black;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+}
+
+.multi-button button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+  flex-grow: 2;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+.multi-button button:focus {
+  outline: var(--border-size) dashed var(--color-primary);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+.multi-button button:active {
+  transform: translateY(var(--border-size));
+}
+
+
+
+.bun {
+ padding: 5px 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-41 {
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+}
+
+.btn-41:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 10%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.btn-41:hover {
+  color: rgb(0, 0, 0);
+}
+
+.btn-41:hover:after {
+  left: auto;
+  right: 0;
+  width: 10%;
+}
+
+.btn-41:active {
+  top: 2px;
+}
+}
+
+
+
+
+.bn48 {
+background: linear-gradient(90deg, #1e39a5, #c50e07);
+  background-size: auto;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  }

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{{ super() }}
+
+
+<div class="row justify-content-center align-items-center" style="margin-top:15px;margin-left:-5%">
+<div class='imgblock'>
+
+<img src="/static/css/sdia (1).png" title='Текст поверх картинки' height="100px"
+width="500px">
+        <span class="typewriter" style="text-shadow: 1px 1px 2px green;">
+             Hello My Friend, I'm C3PO! Project student of OTUS!
+       </span>
+
+</div>
+        <div class="section-row">
+        <div class="section-img">
+<p class="hover-img" data-url="/static/css/droid-c3po.gif"><img src="/static/css/pixelc3po-min.png"  align="right" width="-50%" height="100px"></p>
+    </div>
+         <div class="cursor" id="cursor"></div>
+
+
+</div>
+    </div>
+    </div>
+<div class="container-fluid">
+
+        <div class="row justify-content-center align-items-center">
+            <form action="{{ url_for('otus.inf') }} " method="POST" class="form">
+                <div class='imgblock' style="display: block;
+    margin-left: -63px">
+
+<img src="/static/css/Alerts.png" title='Напишите что будем искать' height="100px"
+width="550px" >
+                <span style="margin-left: -0px;opacity: 1;"><input size="55" class="form-control" type="text" name="account" id="account" placeholder="что ищем?" style="color:#000;"></span>
+                </div>
+                <div class="text-center">
+                    <button type="submit" id="submit" class="btn btn-primary btn-raised align-self-center">Найти</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+ 
+{% endblock %}
+

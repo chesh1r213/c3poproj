@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% block title %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/static/css/C3PO-icon_34503.ico" type="image/x-icon">
+    <link type="text/css" href = "{{ url_for('static', filename = 'css/style.css')}}" rel="stylesheet"/>
+    <link type="text/css" href = "{{ url_for('static', filename = 'css/bootstrap-material-design.min.css')}}" rel="stylesheet"/>
+    <link href="{{url_for ('static', filename='open-iconic/font/css/open-iconic-bootstrap.css') }}" rel="stylesheet" />
+
+
+    {% if title %}
+    <title style="color:#fff;">{{ title }} </title>
+    {% else %}
+    <title style="color:#fff;">Project student of Otus </title>
+    {% endif %}
+    {% endblock %}
+    {% block content %}
+            <header>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <a  class="navbar-brand" href="/">
+
+                        <p >
+                            <img height="35px" width="35px" style="margin-top:15px" src="/static/css/1145601.png">
+
+                    </p>
+                </a>
+    <p class="text-green ml-2" style="color:#fff;font-family:'post_pixel-7.ttf';">
+        Otus Devops Project
+    </p>
+</nav>
+            </header>
+</head>
+    <body onload="showcontent(main)"  style="background: url('/static/css/kosmos-41.png') no-repeat center center fixed;
+; -webkit-background-size: cover;
+   -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;">
+    <div class="container-fluid">
+    <div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
+{% endblock %}
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-black">
+
+
+                    <p class="text-green ml-2" style="color:#fff;font-family:'post_pixel-7.ttf';">May the Force be with you</p>
+				</div>
+			</div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 500);
+    }
+  </script>
+    <script>
+        let t = document.getElementById("cursor");
+document.querySelector(".section-row").addEventListener("mousemove", function(n) {
+    t.style.left = n.clientX + "px",
+    t.style.top = n.clientY + "px"
+});
+function n() {
+    t.classList.add("hover")
+}
+function s() {
+    t.classList.remove("hover")
+}
+function o(t) {
+    t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+}
+document.addEventListener('DOMContentLoaded', function () {
+    let hoverLink = document.querySelectorAll(".hover-img");
+    for (let i = 0; i < hoverLink.length; i++){
+        o(hoverLink[i]);
+        let url = hoverLink[i].getAttribute("data-url");
+        hoverLink[i].addEventListener('mouseenter', function () {
+            t.style.backgroundImage = "url("+ url +")";
+        });
+    }
+})
+    </script>
+<script>
+    $.fn.animate_Text = function() {
+  var string = this.text();
+  return this.each(function(){
+   var $this = $(this);
+   $this.html(string.replace(/./g, '<span class="new">$&</span>'));
+   $this.find('span.new').each(function(i, el){
+    setTimeout(function(){ $(el).addClass('div_opacity'); }, 20 * i);
+   });
+  });
+ };
+ $('#example').show();
+ $('#example').animate_Text();
+ $('#example1').show();
+ $('#example1').animate_Text();
+ $('#ex').show();
+ $('#ex').animate_Text();
+</script>
+    <script>
+        var text = $('.typewriter').text();
+
+var length = text.length;
+var timeOut;
+var character = 0;
+
+
+(function typeWriter() {
+    timeOut = setTimeout(function() {
+        character++;
+        var type = text.substring(0, character);
+        $('.typewriter').text(type);
+        typeWriter();
+
+        if (character == length) {
+            clearTimeout(timeOut);
+        }
+
+    }, 150);
+}());
+    </script>
+    <script>
+
+const clearInput = () => {
+  const input = document.getElementsByTagName("input")[0];
+  input.value = "";
+}
+
+const clearBtn = document.getElementById("clear-btn");
+clearBtn.addEventListener("click", clearInput);
+    </script>
+        <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+   <script>
+
+    document.querySelector('.btn').addEventListener('click',e => {
+        e.target.classList.toggle('loading');
+    });
+</script>
+<script>
+    var audioUrl = '/static/css/0005101.mp3';
+
+// SIMPLE EXEMPLE
+$('.btn').click( () => new Audio(audioUrl).play() ); // that will do the trick !!
+</script>
+    <script>
+        function viewDiv(){
+  document.getElementById("div1").style.display = "block";
+};
+    </script>
+            <script>
+function myFunction1() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'constants.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'board.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'piece.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'main.js')}}"></script>
+    </div>
+</body>
+</html>

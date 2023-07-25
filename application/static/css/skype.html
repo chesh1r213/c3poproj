@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+{{ super() }}
+<div class="container-fluid">
+    <div class="section-row">
+    <div class="row justify-content-center align-items-center">
+        <div class="section-img">
+
+            <p class="hover-img" data-url="/static/css/tonight.gif"><img src="/static/css/trooper.png"  height="65" width="65"></p>
+
+    </div>
+    </div>
+        <div class="cursor" id="cursor"></div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+
+        <div id="example" style="color:#fff;text-shadow: 1px 1px 2px green;">
+        <h4 ><strong><font face="post_pixel-7.ttf">Проверить качества Skype for Business</font></strong></h4>
+        </div>
+    </div>
+<div class="container-fluid">
+
+        <div class="row justify-content-center align-items-center">
+            <form action="{{ url_for('skypeinfo') }} " method="POST" class="form">
+                <div class='imgblock' style="display: block;
+    margin-left: -63px">
+
+<img src="/static/css/Alerts.png" title='Текст поверх картинки' height="100px"
+width="550px" >
+                <span style="margin-left: -0px;opacity: 1;"><input size="60" class="form-control" type="text" name="account" id="account" placeholder="Введите Логин пользователя" style="color:#000;"></span>
+                </div>
+                <div class="text-center">
+                    <button type="submit" id="submit" class="btn btn-primary btn-raised align-self-center">Найти</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+{% endblock %}
