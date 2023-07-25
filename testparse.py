@@ -5,7 +5,7 @@ def googlepars(case,all):
     cc = case.encode("utf-8")
     cc= str(cc)
     cc = cc.replace("'","").replace('\\x','%').replace(' ','+').title()
-    url = f'https://google.com/search?q={cc}'
+    url = f'https://google.ru/search?q={cc}'
     request = urllib.request.Request(url)
     request.add_header('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36')
     raw_response = urllib.request.urlopen(request).read()
